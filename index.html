@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:cadetblue;
+    }
+
+
+    img{
+        margin-top: 30px;
+        width: 400px;
+        margin-left: 450px;
+    }
+
+    button{
+        margin-left: 560px;
+        padding: 10px 40px;
+        font-size: 25px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+</style>
+<body>
+    
+    <img src="dice-1.png" alt="" id="dice">
+    <br>
+    <br>
+    <button id="play-button">PLAY IT</button>
+
+
+    <script>
+
+        function dice(){
+            var random = Math.floor(Math.random() * 6) + 1;
+            console.log(random);
+            // var dice = document.getElementById("dice");
+            if(random == 1){
+                document.getElementById("dice").src = "dice-1.png";
+            }else if(random == 2){
+                document.getElementById("dice").src = "dice-2.png";
+            }else if(random == 3){
+                document.getElementById("dice").src = "dice-3.png";
+            }else if(random == 4){
+                document.getElementById("dice").src = "dice-4.png";
+            }else if(random == 5){
+                document.getElementById("dice").src = "dice-5.png";
+            }else if(random == 6){
+                document.getElementById("dice").src = "dice-6.png";
+            }
+        }
+
+dice()
+document.getElementById("play-button").addEventListener("click", dice);
+
+
+
+    </script>
+</body>
+</html>
